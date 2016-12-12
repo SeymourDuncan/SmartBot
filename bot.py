@@ -19,7 +19,12 @@ report_startdate = '2016-12-08 17:50:00'
 bot = telebot.TeleBot(config.token)
 logging.basicConfig(filename='main.log', format='%(asctime)s %(message)s', datefmt='%d.%m.%Y %I:%M:%S %p', level=logging.INFO)
 
+def todayIsWeekend():
+    return datetime.today().weekday() in (5, 6)
+
 def SendMessage(msg):
+    if todayIsWeekend():
+        return
     bot.send_message(config.chatId, msg);
     logging.info('Message was sent: {}'.format(msg))
 
