@@ -10,11 +10,11 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 standup_msg = 'В 16:00 стендап, просьба не расходиться.';
 report_msg = 'Просьба всем отчитаться по сегодняшним трудозатратам.';
 
-standup_startdate = '2016-12-09 15:30:00'
-report_startdate = '2016-12-09 17:50:00'
+standup_startdate = '2016-12-08 15:30:00'
+report_startdate = '2016-12-08 17:50:00'
 
-standup_startdate_test = '2016-12-08 15:30:00'
-report_startdate_test = '2016-12-08 17:50:00'
+# standup_startdate_test = '2016-12-08 15:30:00'
+# report_startdate_test = '2016-12-08 17:50:00'
 
 bot = telebot.TeleBot(config.token)
 logging.basicConfig(filename='main.log', format='%(asctime)s %(message)s', datefmt='%d.%m.%Y %I:%M:%S %p', level=logging.INFO)
